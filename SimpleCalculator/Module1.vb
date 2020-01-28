@@ -24,10 +24,23 @@ Module Module1
         If operation = "multiply" Then
             Console.WriteLine(CInt(number1) * CInt(number2))
             Console.ReadLine()
+            Try
+                Console.WriteLine(CInt(number1) * CInt(number2))
+            Catch ex As Exception
+                Console.WriteLine("Please enter a whole number")
+
+            End Try
+
 
         ElseIf operation = "add" Then
             Console.WriteLine(CInt(number1) + CInt(number2))
             Console.ReadLine()
+            Try
+                Console.WriteLine(CInt(number1) + CInt(number2))
+            Catch ex As Exception
+                Console.WriteLine("Please enter a whole number")
+
+            End Try
 
         End If
 

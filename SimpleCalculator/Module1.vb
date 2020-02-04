@@ -4,53 +4,90 @@
 
 Option Strict On
 Option Explicit On
+Option Compare Text
 
 Module Module1
-    Dim number1 As String
-    Dim number2 As String
-    Dim operation As String
-    Dim quitProgram As String
-
     Sub Main()
-        Do While True
+        Dim firstNumber As Integer
+        Dim secondNumber As Integer
+        Dim userChoice As String
+        Dim quitProgram As Boolean
+        Dim promtUser As Boolean
 
-            Console.WriteLine("Welcome, pick a first number ")
-            number1 = Console.ReadLine()
+        promtUser = True
+        quitProgram = False
 
-            Console.WriteLine("please pick a second number")
-            number2 = Console.ReadLine()
+        Do While quitProgram = False
 
-            Console.WriteLine("Would you like to add or multiply?")
-            operation = Console.ReadLine()
+            'prompt user for two numbers
 
-            If operation = "multiply" Then
-                Console.WriteLine(CInt(number1) * CInt(number2))
-                Console.ReadLine()
+
+            Console.WriteLine("Please enter a number...")
+            Do While promtUser = True
                 Try
-                    Console.WriteLine(CInt(number1) * CInt(number2))
+                    firstNumber = CInt(Console.ReadLine())
+                    promtUser = False
                 Catch ex As Exception
                     Console.WriteLine("Please enter a whole number")
-
+                    promtUser = True
                 End Try
+            Loop
 
+            Console.WriteLine("Please enter a 2nd number...")
+            Try
+                secondNumber = CInt(Console.ReadLine())
+            Catch ex As Exception
+                Console.WriteLine("Please enter a whole number")
+            End Try
 
-            ElseIf operation = "add" Then
-                Console.WriteLine(CInt(number1) + CInt(number2))
-                Console.ReadLine()
-                Try
-                    Console.WriteLine(CInt(number1) + CInt(number2))
-                Catch ex As Exception
-                    Console.WriteLine("Please enter a whole number")
+            'prompt user for sum or product choice
 
-                End Try
+            'perform proper operation
+            Console.WriteLine("Please Choose an Option")
+            Console.WriteLine("1. Add")
+            Console.WriteLine("2. Multiply")
+            userChoice = Console.ReadLine()
 
+            'Determine the user's choice
+            If userChoice = "1" Then
+
+                'Try
+                Console.WriteLine(firstNumber + secondNumber)
+                'Catch ex As InvalidCastException
+                '    Console.WriteLine("Please enter a whole number")
+                'Catch ex As Exception
+                '    Console.WriteLine("You broke it")
+                'End Try
+
+            ElseIf userChoice = "2" Then
+
+                'Try
+                Console.WriteLine(firstNumber * secondNumber)
+                'Catch ex As InvalidCastException
+                '    Console.WriteLine("Please enter a whole number")
+                'Catch ex As Exception
+                '    Console.WriteLine("You broke it")
+                'End Try
+
+            Else
+
+                Console.WriteLine("Invalid Selection")
+
+            End If
+
+            'display result prompt to end
+            Console.WriteLine("Have a nice day...")
+            Console.WriteLine("Press Enter To Run Again. Enter Q to quit.")
+
+            If Console.ReadLine() = "q" Then
+                quitProgram = True
+            Else
+                quitProgram = False
             End If
 
             Console.Clear()
         Loop
-
-
-
     End Sub
+
 
 End Module

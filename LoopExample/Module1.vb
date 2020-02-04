@@ -7,20 +7,20 @@ Module Module1
         Dim secondNumber As Integer
         Dim result As Integer
 
-
         firstNumber = 5
         secondNumber = 7
 
-        result = firstNumber + secondNumber
-        result = result + 3
+        result = 0 'firstNumber + secondNumber
 
-        For i = 0 To 25 Step 5
-            result = result + 3
+        For i = 0 To 25 Step 2
+            result = result + 1
             Console.WriteLine(i)
         Next
 
         Console.WriteLine(result)
         Console.ReadLine()
+
+
     End Sub
 
 End Module

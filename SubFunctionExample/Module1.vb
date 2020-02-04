@@ -6,26 +6,40 @@ Option Explicit On
 Module Module1
 
     Sub Main()
-        Dim mynumber As Integer
-        mynumber = 7
-        Console.WriteLine("In sub MainSub")
-        Console.WriteLine(mynumber)
-        MySub()
-    End Sub
 
-    Sub MySub()
-        Dim mynumber As Integer
-        mynumber = 8
-        Console.WriteLine("In sub MySub")
-        Console.WriteLine(mynumber)
+        Dim myNumber As Integer
+        myNumber = 7
+        Console.WriteLine("In Sub Main")
+        Console.WriteLine(myNumber)
         Console.ReadLine()
-        Main()
+
+        MySub(myNumber)
+        Console.WriteLine("In Sub Main")
+        Console.WriteLine(myNumber)
+
+        myNumber = MyFunc(myNumber)
+        Console.WriteLine("In Sub Main")
+        Console.WriteLine(myNumber)
+
+
+        Console.ReadLine()
     End Sub
 
-    Function MyFunc() As Integer
+    Sub MySub(myNumber As Integer)
+        'Dim myNumber As Integer
+        'myNumber = myNumber + 2
+        myNumber += 2
+        Console.WriteLine("In Sub MySub")
+        Console.WriteLine(myNumber)
+        Console.ReadLine()
+    End Sub
+
+    Function MyFunc(myNumber As Integer) As Integer
+        'Dim myNumber As Integer
+        myNumber -= 3
         Console.WriteLine("In Function MyFunc")
-        Return 0
+        Console.WriteLine(myNumber)
         Console.ReadLine()
+        Return myNumber
     End Function
-
 End Module

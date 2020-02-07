@@ -7,24 +7,24 @@ Module Module1
 
     Sub Main()
 
-        'Dim myNumber As Integer
-        'myNumber = 7
-        'Console.WriteLine("In Sub Main")
-        'Console.WriteLine(myNumber)
-        'Console.ReadLine()
+        Dim myNumber As Integer
+        myNumber = 7
+        Console.WriteLine("In Sub Main")
+        Console.WriteLine(myNumber)
+        Console.ReadLine()
 
-        'MySub(myNumber)
-        'Console.WriteLine("In Sub Main")
-        'Console.WriteLine(myNumber)
+        MySub(myNumber)
+        Console.WriteLine("In Sub Main")
+        Console.WriteLine(myNumber)
 
-        'myNumber = MyFunc(myNumber)
-        'Console.WriteLine("In Sub Main")
-        'Console.WriteLine(myNumber)
+        myNumber = MyFunc(myNumber)
+        Console.WriteLine("In Sub Main")
+        Console.WriteLine(myNumber)
 
 
-        'Console.ReadLine()
-        'doMath(7, 5, "add")
-        ShowPattern(5)
+        Console.ReadLine()
+        doMath(7, 5, "add")
+        'ShowPattern(5)
         Console.ReadLine()
     End Sub
 
@@ -67,17 +67,17 @@ Module Module1
     End Sub
 
 
-    Sub ShowPattern(length As Integer)
-        Dim character As String
-        Dim pattern As String
+    'Sub ShowPattern(length As Integer)
+    '    Dim character As String
+    '    Dim pattern As String
 
-        character = "*"
-        For index = 0 To length
-            pattern &= character
-            Console.WriteLine(pattern)
-        Next
-        Console.WriteLine()
+    '    character = "*"
+    '    For index = 0 To length
+    '        pattern &= character
+    '        Console.WriteLine(pattern)
+    '    Next
+    '    Console.WriteLine()
 
-    End Sub
+    'End Sub
 
 End Module

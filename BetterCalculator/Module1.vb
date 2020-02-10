@@ -21,13 +21,12 @@ Module Module1
 
 
     'Intro sub
-    Sub Intro()
+    Sub Main()
 
-        Console.WriteLine("Please enter two numbers. Enter " & "Q" & " at any time to quit.")
+        Console.WriteLine("Please enter two numbers. Enter " & """Q""" & " at any time to quit.")
         ChooseNumberOne()
 
     End Sub
-
 
     Sub ChooseNumberOne()
 
@@ -159,7 +158,7 @@ Module Module1
         End If
 
         'restarting the program
-        Intro()
+        Main()
 
     End Sub
 

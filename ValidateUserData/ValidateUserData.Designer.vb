@@ -26,47 +26,63 @@ Partial Class ValidateUserData
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.ValidateButton = New System.Windows.Forms.Button()
+        Me.TotalButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(230, 142)
+        Me.TextBox1.Location = New System.Drawing.Point(153, 92)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 26)
+        Me.TextBox1.Size = New System.Drawing.Size(68, 20)
         Me.TextBox1.TabIndex = 0
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(230, 174)
+        Me.TextBox2.Location = New System.Drawing.Point(153, 113)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 26)
+        Me.TextBox2.Size = New System.Drawing.Size(68, 20)
         Me.TextBox2.TabIndex = 1
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(230, 110)
+        Me.TextBox3.Location = New System.Drawing.Point(153, 71)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 26)
+        Me.TextBox3.Size = New System.Drawing.Size(68, 20)
         Me.TextBox3.TabIndex = 2
         '
         'ValidateButton
         '
-        Me.ValidateButton.Location = New System.Drawing.Point(230, 230)
+        Me.ValidateButton.Location = New System.Drawing.Point(153, 149)
+        Me.ValidateButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ValidateButton.Name = "ValidateButton"
-        Me.ValidateButton.Size = New System.Drawing.Size(99, 46)
+        Me.ValidateButton.Size = New System.Drawing.Size(66, 30)
         Me.ValidateButton.TabIndex = 3
         Me.ValidateButton.Text = "Validate"
         Me.ValidateButton.UseVisualStyleBackColor = True
         '
+        'TotalButton
+        '
+        Me.TotalButton.Location = New System.Drawing.Point(352, 192)
+        Me.TotalButton.Name = "TotalButton"
+        Me.TotalButton.Size = New System.Drawing.Size(75, 23)
+        Me.TotalButton.TabIndex = 4
+        Me.TotalButton.Text = "Button1"
+        Me.TotalButton.UseVisualStyleBackColor = True
+        '
         'ValidateUserData
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(533, 292)
+        Me.Controls.Add(Me.TotalButton)
         Me.Controls.Add(Me.ValidateButton)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "ValidateUserData"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
@@ -78,4 +94,5 @@ Partial Class ValidateUserData
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents ValidateButton As Button
+    Friend WithEvents TotalButton As Button
 End Class

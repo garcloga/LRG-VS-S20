@@ -75,7 +75,7 @@ Partial Class DinerMenuForm
         Me.ButtonExit.Name = "ButtonExit"
         Me.ButtonExit.Size = New System.Drawing.Size(102, 48)
         Me.ButtonExit.TabIndex = 3
-        Me.ButtonExit.Text = "Exit"
+        Me.ButtonExit.Text = "E&xit"
         Me.ButtonExit.UseVisualStyleBackColor = True
         '
         'DescriptionLabel

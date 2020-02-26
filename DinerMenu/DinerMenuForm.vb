@@ -1,4 +1,8 @@
-﻿Public Class DinerMenuForm
+﻿'Logan Garcia
+'RCET0265
+'Diner Menu
+
+Public Class DinerMenuForm
 
     'Declaring what happens when the soup button is clicked
     Private Sub SoupButton_Click(sender As Object, e As EventArgs) Handles SoupButton.Click

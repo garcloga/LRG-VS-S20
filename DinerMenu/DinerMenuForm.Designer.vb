@@ -25,11 +25,11 @@ Partial Class DinerMenuForm
         Me.SoupButton = New System.Windows.Forms.Button()
         Me.SaladButton = New System.Windows.Forms.Button()
         Me.FishButton = New System.Windows.Forms.Button()
-        Me.DinerNameLabel = New System.Windows.Forms.Label()
         Me.DisplaySpecialLabel = New System.Windows.Forms.Label()
-        Me.DescriptionLabel = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.ButtonExit = New System.Windows.Forms.Button()
+        Me.DescriptionLabel = New System.Windows.Forms.RichTextBox()
+        Me.DinerNameLabel = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.SuspendLayout()
         '
         'SoupButton
@@ -59,15 +59,6 @@ Partial Class DinerMenuForm
         Me.FishButton.Text = "Fish"
         Me.FishButton.UseVisualStyleBackColor = True
         '
-        'DinerNameLabel
-        '
-        Me.DinerNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DinerNameLabel.Location = New System.Drawing.Point(275, 18)
-        Me.DinerNameLabel.Name = "DinerNameLabel"
-        Me.DinerNameLabel.Size = New System.Drawing.Size(503, 56)
-        Me.DinerNameLabel.TabIndex = 4
-        Me.DinerNameLabel.Text = "Dex's Diner"
-        '
         'DisplaySpecialLabel
         '
         Me.DisplaySpecialLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -78,26 +69,6 @@ Partial Class DinerMenuForm
         Me.DisplaySpecialLabel.Text = "Diner Special"
         Me.DisplaySpecialLabel.Visible = False
         '
-        'DescriptionLabel
-        '
-        Me.DescriptionLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DescriptionLabel.Location = New System.Drawing.Point(150, 176)
-        Me.DescriptionLabel.Name = "DescriptionLabel"
-        Me.DescriptionLabel.Size = New System.Drawing.Size(405, 128)
-        Me.DescriptionLabel.TabIndex = 6
-        Me.DescriptionLabel.Text = "This custom soup is made from mushroom spores, Yarum seeds, Galla seeds, and Sohl" &
-    "i bark"
-        Me.DescriptionLabel.Visible = False
-        '
-        'Label1
-        '
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(383, 66)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(460, 56)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "Eat Where No Man Has Eaten Before"
-        '
         'ButtonExit
         '
         Me.ButtonExit.Location = New System.Drawing.Point(686, 390)
@@ -107,17 +78,54 @@ Partial Class DinerMenuForm
         Me.ButtonExit.Text = "Exit"
         Me.ButtonExit.UseVisualStyleBackColor = True
         '
+        'DescriptionLabel
+        '
+        Me.DescriptionLabel.BackColor = System.Drawing.SystemColors.Info
+        Me.DescriptionLabel.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DescriptionLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DescriptionLabel.Location = New System.Drawing.Point(181, 156)
+        Me.DescriptionLabel.Name = "DescriptionLabel"
+        Me.DescriptionLabel.Size = New System.Drawing.Size(480, 96)
+        Me.DescriptionLabel.TabIndex = 8
+        Me.DescriptionLabel.TabStop = False
+        Me.DescriptionLabel.Text = "This custom soup is made from mushroom spores, Yarum seeds, Galla seeds, and Sohl" &
+    "i bark"
+        '
+        'DinerNameLabel
+        '
+        Me.DinerNameLabel.BackColor = System.Drawing.SystemColors.Info
+        Me.DinerNameLabel.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DinerNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DinerNameLabel.Location = New System.Drawing.Point(209, 8)
+        Me.DinerNameLabel.Name = "DinerNameLabel"
+        Me.DinerNameLabel.Size = New System.Drawing.Size(480, 96)
+        Me.DinerNameLabel.TabIndex = 9
+        Me.DinerNameLabel.TabStop = False
+        Me.DinerNameLabel.Text = "Dex's Diner"
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.BackColor = System.Drawing.SystemColors.Info
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.Location = New System.Drawing.Point(303, 66)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(326, 38)
+        Me.RichTextBox1.TabIndex = 10
+        Me.RichTextBox1.TabStop = False
+        Me.RichTextBox1.Text = "Eat Where No Man Has Eaten Before"
+        '
         'DinerMenuForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Info
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.DinerNameLabel)
+        Me.Controls.Add(Me.DescriptionLabel)
         Me.Controls.Add(Me.ButtonExit)
         Me.Controls.Add(Me.DisplaySpecialLabel)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.DescriptionLabel)
-        Me.Controls.Add(Me.DinerNameLabel)
         Me.Controls.Add(Me.FishButton)
         Me.Controls.Add(Me.SaladButton)
         Me.Controls.Add(Me.SoupButton)
@@ -130,9 +138,9 @@ Partial Class DinerMenuForm
     Friend WithEvents SoupButton As Button
     Friend WithEvents SaladButton As Button
     Friend WithEvents FishButton As Button
-    Friend WithEvents DinerNameLabel As Label
     Friend WithEvents DisplaySpecialLabel As Label
-    Friend WithEvents DescriptionLabel As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents ButtonExit As Button
+    Friend WithEvents DescriptionLabel As RichTextBox
+    Friend WithEvents DinerNameLabel As RichTextBox
+    Friend WithEvents RichTextBox1 As RichTextBox
 End Class

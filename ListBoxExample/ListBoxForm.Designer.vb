@@ -24,7 +24,7 @@ Partial Class ListBoxForm
     Private Sub InitializeComponent()
         Me.DataListBox = New System.Windows.Forms.ListBox()
         Me.AddButton = New System.Windows.Forms.Button()
-        Me.ClearAllButton = New System.Windows.Forms.Button()
+        Me.ClearButton = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.FirstNameTextbox = New System.Windows.Forms.TextBox()
         Me.LastNameTextbox = New System.Windows.Forms.TextBox()
@@ -49,14 +49,14 @@ Partial Class ListBoxForm
         Me.AddButton.Text = "&Add Item"
         Me.AddButton.UseVisualStyleBackColor = True
         '
-        'ClearAllButton
+        'ClearButton
         '
-        Me.ClearAllButton.Location = New System.Drawing.Point(236, 274)
-        Me.ClearAllButton.Name = "ClearAllButton"
-        Me.ClearAllButton.Size = New System.Drawing.Size(107, 50)
-        Me.ClearAllButton.TabIndex = 2
-        Me.ClearAllButton.Text = "&Clear All"
-        Me.ClearAllButton.UseVisualStyleBackColor = True
+        Me.ClearButton.Location = New System.Drawing.Point(236, 274)
+        Me.ClearButton.Name = "ClearButton"
+        Me.ClearButton.Size = New System.Drawing.Size(107, 50)
+        Me.ClearButton.TabIndex = 2
+        Me.ClearButton.Text = "&Clear All"
+        Me.ClearButton.UseVisualStyleBackColor = True
         '
         'ExitButton
         '
@@ -109,7 +109,7 @@ Partial Class ListBoxForm
         Me.Controls.Add(Me.LastNameTextbox)
         Me.Controls.Add(Me.FirstNameTextbox)
         Me.Controls.Add(Me.ExitButton)
-        Me.Controls.Add(Me.ClearAllButton)
+        Me.Controls.Add(Me.ClearButton)
         Me.Controls.Add(Me.AddButton)
         Me.Controls.Add(Me.DataListBox)
         Me.Name = "ListBoxForm"
@@ -121,7 +121,7 @@ Partial Class ListBoxForm
 
     Friend WithEvents DataListBox As ListBox
     Friend WithEvents AddButton As Button
-    Friend WithEvents ClearAllButton As Button
+    Friend WithEvents ClearButton As Button
     Friend WithEvents ExitButton As Button
     Friend WithEvents FirstNameTextbox As TextBox
     Friend WithEvents LastNameTextbox As TextBox

@@ -1,9 +1,7 @@
 ﻿Public Class ListBoxForm
     Private Sub ListBoxForm_Load(sender As Object, e As EventArgs) Handles Me.Load
-        'DataListBox
         FirstNameTextbox.Text = "Elmer"
         LastNameTextbox.Text = "Fudd"
-
     End Sub
 
     Private Sub AddButton_Click(sender As Object, e As EventArgs) Handles AddButton.Click
@@ -22,12 +20,11 @@
         Dim index As Integer
 
         Me.Text = DataListBox.SelectedIndex.ToString
-        'TODO add selected to first name and last name text box
         index = InStr(DataListBox.SelectedItem.ToString, " ")
 
-        'FirstNameTextbox.Text = Strings.Left(DataListBox.SelectedItem.ToString, index)
-        'TODO Right() don't work
-        LastNameTextbox.Text = Strings.Right(DataListBox.SelectedItem.ToString, index)
+        FirstNameTextbox.Text = Trim(Strings.Left(DataListBox.SelectedItem.ToString, index))
+        LastNameTextbox.Text = Trim(Strings.Mid(DataListBox.SelectedItem.ToString, index, Len(DataListBox.SelectedItem.ToString)))
+
 
     End Sub
 

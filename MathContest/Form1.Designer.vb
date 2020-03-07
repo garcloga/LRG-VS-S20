@@ -38,6 +38,9 @@ Partial Class Form1
         Me.SubtractButton = New System.Windows.Forms.RadioButton()
         Me.DivideButton = New System.Windows.Forms.RadioButton()
         Me.MultiplyButton = New System.Windows.Forms.RadioButton()
+        Me.Operations = New System.Windows.Forms.GroupBox()
+        Me.SubmitButton = New System.Windows.Forms.Button()
+        Me.Operations.SuspendLayout()
         Me.SuspendLayout()
         '
         'NameTextbox
@@ -136,9 +139,9 @@ Partial Class Form1
         Me.StudentAnswerLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StudentAnswerLabel.Location = New System.Drawing.Point(57, 356)
         Me.StudentAnswerLabel.Name = "StudentAnswerLabel"
-        Me.StudentAnswerLabel.Size = New System.Drawing.Size(158, 20)
+        Me.StudentAnswerLabel.Size = New System.Drawing.Size(123, 20)
         Me.StudentAnswerLabel.TabIndex = 14
-        Me.StudentAnswerLabel.Text = "StudentAnswerLabel"
+        Me.StudentAnswerLabel.Text = "Student Answer"
         '
         'StudentAnswerTextbox
         '
@@ -151,7 +154,7 @@ Partial Class Form1
         'AddButton
         '
         Me.AddButton.AutoSize = True
-        Me.AddButton.Location = New System.Drawing.Point(333, 266)
+        Me.AddButton.Location = New System.Drawing.Point(6, 19)
         Me.AddButton.Name = "AddButton"
         Me.AddButton.Size = New System.Drawing.Size(44, 17)
         Me.AddButton.TabIndex = 15
@@ -162,7 +165,7 @@ Partial Class Form1
         'SubtractButton
         '
         Me.SubtractButton.AutoSize = True
-        Me.SubtractButton.Location = New System.Drawing.Point(333, 290)
+        Me.SubtractButton.Location = New System.Drawing.Point(6, 43)
         Me.SubtractButton.Name = "SubtractButton"
         Me.SubtractButton.Size = New System.Drawing.Size(65, 17)
         Me.SubtractButton.TabIndex = 16
@@ -173,7 +176,7 @@ Partial Class Form1
         'DivideButton
         '
         Me.DivideButton.AutoSize = True
-        Me.DivideButton.Location = New System.Drawing.Point(333, 338)
+        Me.DivideButton.Location = New System.Drawing.Point(6, 91)
         Me.DivideButton.Name = "DivideButton"
         Me.DivideButton.Size = New System.Drawing.Size(55, 17)
         Me.DivideButton.TabIndex = 18
@@ -184,7 +187,7 @@ Partial Class Form1
         'MultiplyButton
         '
         Me.MultiplyButton.AutoSize = True
-        Me.MultiplyButton.Location = New System.Drawing.Point(333, 314)
+        Me.MultiplyButton.Location = New System.Drawing.Point(6, 67)
         Me.MultiplyButton.Name = "MultiplyButton"
         Me.MultiplyButton.Size = New System.Drawing.Size(60, 17)
         Me.MultiplyButton.TabIndex = 17
@@ -192,15 +195,36 @@ Partial Class Form1
         Me.MultiplyButton.Text = "Multiply"
         Me.MultiplyButton.UseVisualStyleBackColor = True
         '
+        'Operations
+        '
+        Me.Operations.Controls.Add(Me.DivideButton)
+        Me.Operations.Controls.Add(Me.AddButton)
+        Me.Operations.Controls.Add(Me.MultiplyButton)
+        Me.Operations.Controls.Add(Me.SubtractButton)
+        Me.Operations.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Operations.Location = New System.Drawing.Point(348, 296)
+        Me.Operations.Name = "Operations"
+        Me.Operations.Size = New System.Drawing.Size(97, 115)
+        Me.Operations.TabIndex = 19
+        Me.Operations.TabStop = False
+        Me.Operations.Text = "Operations"
+        '
+        'SubmitButton
+        '
+        Me.SubmitButton.Location = New System.Drawing.Point(522, 185)
+        Me.SubmitButton.Name = "SubmitButton"
+        Me.SubmitButton.Size = New System.Drawing.Size(75, 23)
+        Me.SubmitButton.TabIndex = 20
+        Me.SubmitButton.Text = "Submit"
+        Me.SubmitButton.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(834, 537)
-        Me.Controls.Add(Me.DivideButton)
-        Me.Controls.Add(Me.MultiplyButton)
-        Me.Controls.Add(Me.SubtractButton)
-        Me.Controls.Add(Me.AddButton)
+        Me.Controls.Add(Me.SubmitButton)
+        Me.Controls.Add(Me.Operations)
         Me.Controls.Add(Me.StudentAnswerLabel)
         Me.Controls.Add(Me.StudentAnswerTextbox)
         Me.Controls.Add(Me.SecondNumberLabel)
@@ -215,6 +239,8 @@ Partial Class Form1
         Me.Controls.Add(Me.NameTextbox)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        Me.Operations.ResumeLayout(False)
+        Me.Operations.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -236,4 +262,6 @@ Partial Class Form1
     Friend WithEvents SubtractButton As RadioButton
     Friend WithEvents DivideButton As RadioButton
     Friend WithEvents MultiplyButton As RadioButton
+    Friend WithEvents Operations As GroupBox
+    Friend WithEvents SubmitButton As Button
 End Class

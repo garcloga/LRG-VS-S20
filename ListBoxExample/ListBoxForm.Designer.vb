@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ListBoxForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class ListBoxForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.DataListBox = New System.Windows.Forms.ListBox()
         Me.AddButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
@@ -30,39 +31,46 @@ Partial Class ListBoxForm
         Me.LastNameTextbox = New System.Windows.Forms.TextBox()
         Me.FirstNameLabel = New System.Windows.Forms.Label()
         Me.LastNameLabel = New System.Windows.Forms.Label()
+        Me.AccumulateMessages = New System.Windows.Forms.Button()
+        Me.ToolTipExample = New System.Windows.Forms.ToolTip(Me.components)
+        Me.TopMenuStrip = New System.Windows.Forms.MenuStrip()
+        Me.AddItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClearAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TopMenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataListBox
         '
         Me.DataListBox.FormattingEnabled = True
-        Me.DataListBox.Location = New System.Drawing.Point(38, 90)
+        Me.DataListBox.Location = New System.Drawing.Point(41, 90)
         Me.DataListBox.Name = "DataListBox"
         Me.DataListBox.Size = New System.Drawing.Size(459, 173)
         Me.DataListBox.TabIndex = 0
         '
         'AddButton
         '
-        Me.AddButton.Location = New System.Drawing.Point(82, 274)
+        Me.AddButton.Location = New System.Drawing.Point(37, 269)
         Me.AddButton.Name = "AddButton"
-        Me.AddButton.Size = New System.Drawing.Size(107, 50)
+        Me.AddButton.Size = New System.Drawing.Size(152, 50)
         Me.AddButton.TabIndex = 1
         Me.AddButton.Text = "&Add Item"
+        Me.ToolTipExample.SetToolTip(Me.AddButton, "Click Here to add an item")
         Me.AddButton.UseVisualStyleBackColor = True
         '
         'ClearButton
         '
-        Me.ClearButton.Location = New System.Drawing.Point(236, 274)
+        Me.ClearButton.Location = New System.Drawing.Point(191, 269)
         Me.ClearButton.Name = "ClearButton"
-        Me.ClearButton.Size = New System.Drawing.Size(107, 50)
+        Me.ClearButton.Size = New System.Drawing.Size(152, 50)
         Me.ClearButton.TabIndex = 2
         Me.ClearButton.Text = "&Clear All"
         Me.ClearButton.UseVisualStyleBackColor = True
         '
         'ExitButton
         '
-        Me.ExitButton.Location = New System.Drawing.Point(390, 274)
+        Me.ExitButton.Location = New System.Drawing.Point(345, 269)
         Me.ExitButton.Name = "ExitButton"
-        Me.ExitButton.Size = New System.Drawing.Size(107, 50)
+        Me.ExitButton.Size = New System.Drawing.Size(152, 50)
         Me.ExitButton.TabIndex = 3
         Me.ExitButton.Text = "E&xit"
         Me.ExitButton.UseVisualStyleBackColor = True
@@ -99,11 +107,42 @@ Partial Class ListBoxForm
         Me.LastNameLabel.TabIndex = 7
         Me.LastNameLabel.Text = "Last Name"
         '
+        'AccumulateMessages
+        '
+        Me.AccumulateMessages.Location = New System.Drawing.Point(37, 330)
+        Me.AccumulateMessages.Name = "AccumulateMessages"
+        Me.AccumulateMessages.Size = New System.Drawing.Size(460, 50)
+        Me.AccumulateMessages.TabIndex = 8
+        Me.AccumulateMessages.Text = "Accumulate &Messages"
+        Me.AccumulateMessages.UseVisualStyleBackColor = True
+        '
+        'TopMenuStrip
+        '
+        Me.TopMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddItemToolStripMenuItem, Me.ClearAllToolStripMenuItem})
+        Me.TopMenuStrip.Location = New System.Drawing.Point(0, 0)
+        Me.TopMenuStrip.Name = "TopMenuStrip"
+        Me.TopMenuStrip.Size = New System.Drawing.Size(601, 24)
+        Me.TopMenuStrip.TabIndex = 9
+        Me.TopMenuStrip.Text = "MenuStrip1"
+        '
+        'AddItemToolStripMenuItem
+        '
+        Me.AddItemToolStripMenuItem.Name = "AddItemToolStripMenuItem"
+        Me.AddItemToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
+        Me.AddItemToolStripMenuItem.Text = "add item"
+        '
+        'ClearAllToolStripMenuItem
+        '
+        Me.ClearAllToolStripMenuItem.Name = "ClearAllToolStripMenuItem"
+        Me.ClearAllToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
+        Me.ClearAllToolStripMenuItem.Text = "clear all"
+        '
         'ListBoxForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(601, 450)
+        Me.Controls.Add(Me.AccumulateMessages)
         Me.Controls.Add(Me.LastNameLabel)
         Me.Controls.Add(Me.FirstNameLabel)
         Me.Controls.Add(Me.LastNameTextbox)
@@ -112,8 +151,12 @@ Partial Class ListBoxForm
         Me.Controls.Add(Me.ClearButton)
         Me.Controls.Add(Me.AddButton)
         Me.Controls.Add(Me.DataListBox)
+        Me.Controls.Add(Me.TopMenuStrip)
+        Me.MainMenuStrip = Me.TopMenuStrip
         Me.Name = "ListBoxForm"
         Me.Text = "List Box"
+        Me.TopMenuStrip.ResumeLayout(False)
+        Me.TopMenuStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -127,4 +170,9 @@ Partial Class ListBoxForm
     Friend WithEvents LastNameTextbox As TextBox
     Friend WithEvents FirstNameLabel As Label
     Friend WithEvents LastNameLabel As Label
+    Friend WithEvents AccumulateMessages As Button
+    Friend WithEvents ToolTipExample As ToolTip
+    Friend WithEvents TopMenuStrip As MenuStrip
+    Friend WithEvents AddItemToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClearAllToolStripMenuItem As ToolStripMenuItem
 End Class

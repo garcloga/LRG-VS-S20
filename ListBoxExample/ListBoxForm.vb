@@ -24,8 +24,7 @@
 
         FirstNameTextbox.Text = Trim(Strings.Left(DataListBox.SelectedItem.ToString, index))
         LastNameTextbox.Text = Trim(Strings.Mid(DataListBox.SelectedItem.ToString, index, Len(DataListBox.SelectedItem.ToString)))
-
-
     End Sub
+
 
 End Class

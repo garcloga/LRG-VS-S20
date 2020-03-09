@@ -14,27 +14,27 @@
     Sub OperationSelect()
         Number1 = Int(FirstNumberTextbox.Text)
         Number2 = Int(SecondNumberTextbox.Text)
+        ChildAnswer = Int(StudentAnswerTextbox.Text)
         If AddButton.Checked = True Then
             CorrectAnswer = Number1 + Number2
-            CompleteForm()
+            FormFilledOut()
         ElseIf SubtractButton.Checked = True Then
             CorrectAnswer = Number1 - Number2
-            CompleteForm()
+            FormFilledOut()
         ElseIf MultiplyButton.Checked = True Then
             CorrectAnswer = Number1 * Number2
-            CompleteForm()
+            FormFilledOut()
         ElseIf DivideButton.Checked = True Then
             CorrectAnswer = Number1 \ Number2
-            CompleteForm()
+            FormFilledOut()
         Else
             MsgBox("Please Choose An Operator")
 
         End If
 
-
     End Sub
 
-    Sub CompleteForm()
+    Sub FormFilledOut()
         If NameTextbox.Text = "" Then
             MsgBox("Please Fill In The Info")
             FilledOut = False
@@ -54,10 +54,19 @@
             MsgBox("Please Fill In The Info")
             FilledOut = False
         Else
-            MsgBox(CorrectAnswer)
+            FilledOut = True
+            notice()
         End If
     End Sub
 
+
+    Sub notice()
+        If ChildAnswer = CorrectAnswer Then
+            MsgBox("Correct! The answer is " & CorrectAnswer & "!")
+        ElseIf ChildAnswer <> CorrectAnswer Then
+            MsgBox("Incorrect, the correct answer is " & CorrectAnswer & "!")
+        End If
+    End Sub
 
     Private Sub SubmitButton_Click(sender As Object, e As EventArgs) Handles SubmitButton.Click
         OperationSelect()

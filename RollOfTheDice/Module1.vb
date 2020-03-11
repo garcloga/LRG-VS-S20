@@ -1,5 +1,13 @@
-﻿Module Module1
-    'Setting the variables
+﻿'Logan Garcia
+'RCET0265
+'Spring2020
+'Roll Of The Dice
+'https://github.com/garcloga/LRG-VS-S20
+
+
+
+Module Module1
+    'Assigning variables
     Public Dice1 As Integer
     Public Dice2 As Integer
     Public Sum As Integer
@@ -19,7 +27,7 @@
     Public Total As Integer
 
     Sub Main()
-        'Creating the array
+        'Creating an array
         Dim StoredValues = New Integer(1, 12) {{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}}
 
         'Rolling the dice

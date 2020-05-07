@@ -1,4 +1,12 @@
-﻿Public Class Form1
+﻿
+'Logan Garcia
+'RCT0265
+'Math Contest
+
+Option Explicit On
+Option Strict On
+
+Public Class Form1
 
     Public Number1 As Integer
     Public Number2 As Integer
@@ -9,23 +17,19 @@
 
 
     'This function is used to find the correct answer set by the teacher
-
-
     Sub OperationSelect()
-        Number1 = Int(FirstNumberTextbox.Text)
-        Number2 = Int(SecondNumberTextbox.Text)
-        ChildAnswer = Int(StudentAnswerTextbox.Text)
+
         If AddButton.Checked = True Then
-            CorrectAnswer = Number1 + Number2
+            CorrectAnswer = CInt(Int(FirstNumberTextbox.Text)) + CInt(Int(SecondNumberTextbox.Text))
             FormFilledOut()
         ElseIf SubtractButton.Checked = True Then
-            CorrectAnswer = Number1 - Number2
+            CorrectAnswer = CInt(Int(FirstNumberTextbox.Text)) - CInt(Int(SecondNumberTextbox.Text))
             FormFilledOut()
         ElseIf MultiplyButton.Checked = True Then
-            CorrectAnswer = Number1 * Number2
+            CorrectAnswer = CInt(Int(FirstNumberTextbox.Text)) * CInt(Int(SecondNumberTextbox.Text))
             FormFilledOut()
         ElseIf DivideButton.Checked = True Then
-            CorrectAnswer = Number1 \ Number2
+            CorrectAnswer = CInt(Int(FirstNumberTextbox.Text)) \ CInt(Int(SecondNumberTextbox.Text))
             FormFilledOut()
         Else
             MsgBox("Please Choose An Operator")
@@ -58,6 +62,7 @@
             notice()
         End If
     End Sub
+
 
 
     Sub notice()

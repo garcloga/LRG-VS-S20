@@ -1,4 +1,8 @@
-﻿Public Class Form1
+﻿'Logan Garcia
+'RCET0265
+'Etch o sketch
+
+Public Class Form1
     Dim penColor As Color
     Dim myPen As New Pen(Color.Black)
     Dim oldX As Integer

@@ -32,7 +32,7 @@ Namespace My
 
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()> _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Etch_o_sketch.Form1
+            Me.MainForm = Global.Etch_o_sketch.Etchasketch
         End Sub
     End Class
 End Namespace

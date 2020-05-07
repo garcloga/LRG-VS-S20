@@ -2,7 +2,7 @@
 'RCET0265
 'Etch o sketch
 
-Public Class Form1
+Public Class Etchasketch
     Dim penColor As Color
     Dim myPen As New Pen(Color.Black)
     Dim oldX As Integer

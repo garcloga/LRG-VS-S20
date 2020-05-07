@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class Etchasketch
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -65,7 +65,7 @@ Partial Class Form1
         Me.EraseButton.Text = "Erase"
         Me.EraseButton.UseVisualStyleBackColor = True
         '
-        'Form1
+        'Etchasketch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -74,8 +74,8 @@ Partial Class Form1
         Me.Controls.Add(Me.DrawButton)
         Me.Controls.Add(Me.ChangeColorButton)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Name = "Etchasketch"
+        Me.Text = "Etchasketch"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
